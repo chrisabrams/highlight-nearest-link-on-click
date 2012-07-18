@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Vacation Time: Where would you like it visit?</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="css/bootstrap-all.min.css" />
+	</head>
+	<body>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="brand" href="#">Vacation Time</a>
+					<span class="sub-text">Where would you like it visit? Click a country below..or just click near one ;)</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div id="hero-container" class="row-fluid">
+				<div class="hero-unit">
+					<h1>Vacation Time</h1>
+					<p>Choose which cities you want to go on vacation!</p>
+					<p><a id="getting-started" class="btn btn-primary btn-large">Get Started</a></p>
+				</div>
+			</div>
+
+			<div id="content-container" class="row-fluid">
+				<div class="span10">
+					<h1>Countries</h1>
+					<div id="countries-container">
+					</div>
+				</div> <!-- main -->
+				<div class="span2">
+					<h1>Info</h1>
+					<div>Hits: <span id="clicks">0</span></div>
+					<div>Misses: <span id="misses">0</span></div>
+
+					<h1>Chosen</h1>
+					<ul id="anchor-count-container"></ul>
+				</div> <!-- sidebar -->
+			</div>
+		</div>
+
+	<script src="js/vacation.js" async></script>
+	</body>
+</html>

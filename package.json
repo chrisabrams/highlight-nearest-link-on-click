@@ -1,0 +1,11 @@
+{
+  "name": "Op-demo",
+  "description": "Just a demo selecting links.",
+  "author": "Chris Abrams",
+  "version": "0.0.1",
+  "dependencies": {
+    "serve": "*",
+    "uglify-js": "*"
+  },
+  "engine": "node >= 0.8.1"
+}
