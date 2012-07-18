@@ -376,9 +376,7 @@ App.prototype.nearest = function(sel, x, y) {
 		distX = intersectX ? 0 : maxX1 - minX2;
 		distY = intersectY ? 0 : maxY1 - minY2;
 		distT = (intersectX || intersectY) ? Math.max(distX, distY) : Math.sqrt(distX * distX + distY * distY);
-console.log(distX);
-console.log(distY);
-console.log(distT);
+
 		if(distT <= compDist + tolerance) {
 			compDist = Math.min(compDist, distT);
 			cache.push({
@@ -459,6 +457,8 @@ App.prototype.populateCountries = function() {
 		//Apply any actions needed for anchors
 		self.anchorActions(anchor);
 		self.updateInfo(prox); //Update list
+
+		console.log($.elementFromPoint(e.pageX, e.pageY));
 	});
 };
 
@@ -513,6 +513,37 @@ App.prototype.init = function() {
 	});
 };
 
+(function ($){
+  var check=false, isRelative=true;
+
+  $.elementFromPoint = function(x,y)
+  {
+    if(!document.elementFromPoint) return null;
+
+    if(!check)
+    {
+      var sl;
+      if((sl = $(document).scrollTop()) >0)
+      {
+       isRelative = (document.elementFromPoint(0, sl + $(window).height() -1) == null);
+      }
+      else if((sl = $(document).scrollLeft()) >0)
+      {
+       isRelative = (document.elementFromPoint(sl + $(window).width() -1, 0) == null);
+      }
+      check = (sl>0);
+    }
+
+    if(!isRelative)
+    {
+      x += $(document).scrollLeft();
+      y += $(document).scrollTop();
+    }
+
+    return document.elementFromPoint(x,y);
+  }	
+
+})(jQuery);
 var vacation = new App;
 
 //Let's start clicking!
