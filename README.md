@@ -9,13 +9,6 @@ Links will be highlighted regardless if you actually click on a link. If you don
 ##F.A.Q.
 Clicking in the sidebar on the right is not going to trigger the anchor tags, as the sidebar is designed as a visual aid and I didn't want to get all recursive..
 
-##Project Tech Info.
-If you want to be able to build the project or run tests, you'll need Node 0.8.1 or greater installed. Make sure to run
-
-	npm install
-
-to make sure you have the project's dependencies for building & tests.
-
 ##Running
 Open the index.html file to see the project.
 
@@ -26,4 +19,5 @@ If you have node you can also use serve:
 ##Building
 From the project's root run:
 
+	npm install
 	./build
