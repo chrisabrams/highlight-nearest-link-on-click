@@ -17,14 +17,11 @@ If you want to be able to build the project or run tests, you'll need Node 0.8.1
 to make sure you have the project's dependencies for building & tests.
 
 ##Running
-If you have node
+Open the index.html file to see the project.
 
-	npm install
+If you have node you can also use serve:
+
 	serve
-
-Now the project is available at [http://localhost:3000](http://localhost:3000)
-
-Otherwise, just run the index.html file
 
 ##Building
 From the project's root run:
